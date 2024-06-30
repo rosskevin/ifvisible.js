@@ -56,7 +56,7 @@
   },
   "homepage": "https://github.com/rosskevin/ifvisible",
   "devDependencies": {
-    "@alienfast/eslint-config": "^5.1.5",
+    "@alienfast/eslint-config": "^5.1.6",
     "@alienfast/prettier-config": "^1.0.0",
     "@alienfast/tsconfig": "^1.0.1",
     "@auto-it/all-contributors": "^11.1.6",

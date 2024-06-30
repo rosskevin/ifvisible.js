@@ -15,9 +15,9 @@ jobs:
       - name: Prepare repository
         run: git fetch --unshallow --tags
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: 'lts'
+          node-version: 'latest'
           cache: 'yarn'
 
       # allow the lock file to change (updating our own workspace versions in monorepo)
