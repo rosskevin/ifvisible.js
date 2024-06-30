@@ -6,6 +6,6 @@
     "outDir": "dist/es",
     "rootDir": "src"
   },
-  "include": ["./src/**/*"],
+  "include": ["./src/**/*", "./scripts/**/*"],
   "exclude": ["node_modules"]
 }

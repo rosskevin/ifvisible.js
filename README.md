@@ -31,7 +31,6 @@ This library provides a singleton exposed as `ifvisible` by default in addition 
 
 ```js
 // import singleton global bound to the `window`
-import { ifvisible } from '@rosskevin/ifvisible'
 ```
 
 or for more advanced usage for use cases that a singleton may not be useful, you may instantiate it directly:
@@ -39,22 +38,23 @@ or for more advanced usage for use cases that a singleton may not be useful, you
 ```js
 // import the object and instantiate it yourself
 import { IfVisible } from '@rosskevin/ifvisible'
+
 window.ifvisible = new IfVisible(window, document)
 ```
 
 ### General
 
 ```js
+import { ifvisible } from '@rosskevin/ifvisible'
+
 // If page is visible right now
 if (ifvisible.now()) {
   // Display pop-up
-  openPopUp()
 }
 
 // You can also check the page status using `now` method
 if (!ifvisible.now('hidden')) {
   // Display pop-up if page is not hidden
-  openPopUp()
 }
 
 // Possible statuses are:
@@ -66,6 +66,8 @@ if (!ifvisible.now('hidden')) {
 ### Options
 
 ```js
+import { ifvisible } from '@rosskevin/ifvisible'
+
 ifvisible
   .setIdleDuration(120) // default: 30 - Page will become idle after 120 seconds
   .setThrottleDuration(1000) // default: 500 - DOM event triggers will be throttled to avoid bogging down UI
@@ -76,6 +78,8 @@ ifvisible
 Set intervals that run every X seconds if the page is visible.
 
 ```js
+import { ifvisible } from '@rosskevin/ifvisible'
+
 // If page is visible run this function on every half seconds
 ifvisible.onEvery(0.5, () => {
   // ...
@@ -85,6 +89,8 @@ ifvisible.onEvery(0.5, () => {
 ### `on`
 
 ```js
+import { ifvisible } from '@rosskevin/ifvisible'
+
 ifvisible.on('blur', () => {
   // ...
 })
@@ -105,6 +111,9 @@ ifvisible.on('wakeup', () => {
 ### `off`:
 
 ```js
+import { ifvisible } from '@rosskevin/ifvisible'
+
+const triggeredFunction = () => {}
 ifvisible.off('idle', triggeredFunction) // will remove only triggeredFunction from being tiggered on idle
 ifvisible.off('idle') // will remove all events triggered on idle
 
@@ -114,6 +123,8 @@ ifvisible.off('idle') // will remove all events triggered on idle
 ### Manually trigger status events
 
 ```js
+import { ifvisible } from '@rosskevin/ifvisible'
+
 // will put page in a idle status
 ifvisible.idle()
 
@@ -128,6 +139,8 @@ ifvisible.idle(() => {
 ### Advanced
 
 ```js
+import { ifvisible } from '@rosskevin/ifvisible'
+
 ifvisible.detach() // detach from DOM but keep user listeners stored within ifvisible
 ifvisible.reattach() // reattach to DOM and start listening again
 ```
@@ -161,7 +174,3 @@ NOTE: this fork was `detached` for the sole purpose of making new pull requests 
 ## License
 
 MIT.
-
-```
-
-```

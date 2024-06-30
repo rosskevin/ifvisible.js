@@ -115,7 +115,7 @@ export class IfVisible {
 
   public setThrottleDuration(milliseconds: number): IfVisible {
     this.throttleDuration = milliseconds
-    this.reattach
+    this.reattach()
     return this
   }
 

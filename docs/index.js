@@ -104,8 +104,7 @@ var Timer = class {
     this.stop();
   }
   start() {
-    if (this.id !== void 0)
-      clearInterval(this.id);
+    if (this.id !== void 0) clearInterval(this.id);
     this.id = setInterval(this.callback, this.seconds * 1e3);
   }
 };
@@ -168,7 +167,7 @@ var IfVisible = class {
   }
   setThrottleDuration(milliseconds) {
     this.throttleDuration = milliseconds;
-    this.reattach;
+    this.reattach();
     return this;
   }
   idle(callback) {
