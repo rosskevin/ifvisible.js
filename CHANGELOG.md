@@ -1,3 +1,15 @@
+# v3.3.4 (Sun Jun 30 2024)
+
+#### 🐛 Bug Fix
+
+- Fix reattach and update [#18](https://github.com/rosskevin/ifvisible/pull/18) ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v3.3.3 (Mon May 01 2023)
 
 #### 🐛 Bug Fix
