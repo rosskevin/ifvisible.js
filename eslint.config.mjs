@@ -1,19 +1,22 @@
 import tseslint from 'typescript-eslint'
 
-import { configs } from './src/index.js'
+import { configs } from '@alienfast/eslint-config'
 
+// npx @eslint/config-inspector
 export default tseslint.config({
   name: 'project',
-  extends: [...configs.recommended],
+  extends: [
+    ...configs.recommended
+    // ...configs.js
+  ],
+
+},
+{      ignores: [
+        "tsup.config.ts",
+    //     "docs/index.js*",
+        // "**/jest.config.js",
+        // "**/rollup.config.js",
+    ],
+
 })
 
-// export default [{
-//     ignores: [
-//         "**/.eslintrc.js",
-//         "**/dist",
-//         "docs/index.js*",
-//         "**/node_modules",
-//         "**/jest.config.js",
-//         "**/rollup.config.js",
-//     ],
-// }
