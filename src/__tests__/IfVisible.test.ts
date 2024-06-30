@@ -1,4 +1,3 @@
-/* eslint-disable jest/expect-expect */
 import { FireableEvent, Status } from '../EventBus'
 import { IfVisible } from '../IfVisible'
 

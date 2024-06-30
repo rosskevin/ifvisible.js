@@ -1,5 +1,4 @@
 {
-  "xxxtypescript.tsdk": ".yarn/sdks/typescript/lib",
   "search.exclude": {
     "**/.yarn": true,
     "**/.pnp.*": true
