@@ -1,10 +1,9 @@
-/* eslint-disable no-console,@typescript-eslint/no-floating-promises */
+/* eslint-disable no-console */
 import { $ } from 'execa'
 import { rimraf as r } from 'rimraf'
 
 // TODO: promote this as a script to @alienfast/ci once it is stable
 
-// eslint-disable-next-line no-console
 console.log('Cleaning yarn...')
 
 await $`yarn tsc -b --clean`

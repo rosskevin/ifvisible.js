@@ -4,7 +4,6 @@ import { rimraf as r } from 'rimraf'
 
 // TODO: promote this as a script to @alienfast/ci once it is stable
 
-// eslint-disable-next-line no-console
 console.log('Cleaning...')
 
 await $`yarn tsc -b --clean`
