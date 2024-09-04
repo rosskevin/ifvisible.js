@@ -250,10 +250,7 @@ var IfVisible = class {
     this.winListeners = {};
     this.docListeners = {};
     this.focusListener = void 0;
-    this.docListeners[resolveVisibilityChangeEvent(this.doc)] = throttle(
-      () => this.trackChange(),
-      this.throttleDuration
-    );
+    this.docListeners[resolveVisibilityChangeEvent(this.doc)] = () => this.trackChange();
     for (const name of ["mousemove", "mousedown", "keyup", "touchstart"]) {
       this.docListeners[name] = throttle(() => this.startIdleTimer(), this.throttleDuration);
     }
