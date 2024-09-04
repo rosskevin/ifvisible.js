@@ -224,10 +224,7 @@ export class IfVisible {
 
     //-----------------------------
     // instantiate listeners for doc and store them
-    this.docListeners[resolveVisibilityChangeEvent(this.doc) as 'visibilitychange'] = throttle(
-      () => this.trackChange(),
-      this.throttleDuration,
-    )
+    this.docListeners[resolveVisibilityChangeEvent(this.doc) as 'visibilitychange'] = () => this.trackChange()
 
     for (const name of ['mousemove', 'mousedown', 'keyup', 'touchstart']) {
       this.docListeners[name] = throttle(() => this.startIdleTimer(), this.throttleDuration)
