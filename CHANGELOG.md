@@ -1,3 +1,24 @@
+# v3.3.5 (Wed Sep 04 2024)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, null[@Basvg](https://github.com/Basvg), for all your work!
+
+#### 🐛 Bug Fix
+
+- Remove throttling for visibility change event [#20](https://github.com/rosskevin/ifvisible/pull/20) ([@Basvg](https://github.com/Basvg))
+
+#### ⚠️ Pushed to `master`
+
+- Apply yarn.lock changes ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 2
+
+- [@Basvg](https://github.com/Basvg)
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v3.3.4 (Sun Jun 30 2024)
 
 #### 🐛 Bug Fix
